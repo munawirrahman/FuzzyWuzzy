@@ -30,7 +30,6 @@ public class FuzzyWuzzy {
         List<Response> responseList = new List<Response>();
         for (Request curRequest : requests) {
             Response response = new Response();
-            List<String> JSONCollection = new List<String>();
             if(curRequest.FuzzyWuzzy_logic=='SimpleRatio'){response.Score=SimpleRatio(curRequest.String01,curRequest.String02);}
             else if(curRequest.FuzzyWuzzy_logic=='PartialRatio'){response.Score=PartialRatio(curRequest.String01,curRequest.String02);}
             else{response.Score=Null;}
